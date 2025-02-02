@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruit Store</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <!-- Taiwind CDN -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Daisy UI -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "button-color": "#F85559",
+              "black-color": "#131318",
+              "description-color": "rgba(19,19,24,0.6)",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- css style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font name -->
+    <style>
+      .lato-font {
+        font-family: "Lato", serif;
+      }
+    </style>
+  </head>
+  <body class="lato-font">
+    <header class="container mx-auto px-3.5 sm:px-6 lg:px-12">
+      <div class="my-12 lg:bg-button-color lg:h-24 rounded-full">
+        <!-- phone nav -->
+        <div class="flex  justify-between lg:hidden ">
+          <div class="dropdown">
+            <div
+              tabindex="0"
+              role="button"
+              class="lg:hidden btn btn-ghost btn-circle"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h7"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            >
+              <li><a>Home</a></li>
+              <li><a>About Us</a></li>
+              <li><a>Shop</a></li>
+              <li><a>All Fruits</a></li>
+            </ul>
+          </div>
+          <!-- icon -->
+          <div class="items-center flex justify-center lg:text-white">
+            <img class=" w-12 sm:w-16 pr-4" src="images/logo.png" alt="" /> 
+            <a class=" hidden sm:flex items-center font-bold sm:text-4xl">
+              Fruit Shop</a>
+          </div>
+        </div>
+        <!-- lg nav -->
+        <div class="hidden lg:block">
+          <div class="flex justify-around items-center">
+            <div
+              class="left flex list-none font-medium text-lg pt-5 text-white"
+            >
+              <li><a class="pr-4" href="">Home</a></li>
+              <li><a class="pr-4" href="">About Us</a></li>
+              <li><a class="pr-4" href="">Shop</a></li>
+              <li><a class="pr-4" href="">All Fruits</a></li>
+            </div>
+            <div class="pt-5">
+              <div class="items-center flex justify-center lg:text-white">
+                <a class="flex items-center font-bold text-4xl">
+                  <img class="pr-4" src="images/logo.png" alt="" /> Fruit
+                  Shop</a
+                >
+              </div>
+            </div>
+            <div class="right flex pt-4">
+              <input
+                class="p-5 rounded-[50px] w-80"
+                type="search"
+                placeholder="search here"
+              />
+              <img
+                src="./images/search.png"
+                class="relative top-4 right-12 h-8"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- carosel -->
+      <div class="carousel   ">
+        <!-- slide1 -->
+        <div 
+          id="slide1"
+          class="carousel-item relative   mx-auto    w-full rounded-lg"
+          style="
+            background: linear-gradient(
+                rgba(32, 32, 32, 0.856),
+                rgba(53, 52, 52, 0.158)
+              ),
+              url('images/banner1.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+          "
+        >
+          <div class="mx-auto my-24">
+            <div class="text-center text-white">
+              <h1
+                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold max-w-screen-md mx-auto xl:pt-20 text-center"
+              >
+                Exotic tastes at your doorstep
+              </h1>
+              <p class="text-center py-2.5 sm:py-3.5 lg:py-6 font-medium text-base  sm:text-xl  lg:text-2xl">
+                We supply highly quality organic products
+              </p>
+
+              <button
+                class="bg-button-color xl:font-extrabold text-xs xl:text-xl flex mx-auto rounded-lg xl:rounded-xl sm:py-2  xl:py-2.5 px-7"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide4" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <!-- slide2 -->
+        <div 
+          id="slide2"
+          class="carousel-item relative   mx-auto    w-full rounded-lg"
+          style="
+            background: linear-gradient(
+                rgba(32, 32, 32, 0.856),
+                rgba(53, 52, 52, 0.158)
+              ),
+              url('images/banner2.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+          "
+        >
+          <div class="mx-auto my-24">
+            <div class="text-center text-white">
+              <h1
+                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold max-w-screen-md mx-auto xl:pt-20 text-center"
+              >
+                Exotic tastes at your doorstep
+              </h1>
+              <p class="text-center py-2.5 sm:py-3.5 lg:py-6 font-medium text-base  sm:text-xl  lg:text-2xl">
+                We supply highly quality organic products
+              </p>
+
+              <button
+                class="bg-button-color xl:font-extrabold text-xs xl:text-xl flex mx-auto rounded-lg xl:rounded-xl sm:py-2  xl:py-2.5 px-7"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <!-- slide3 -->
+        <div 
+          id="slide3"
+          class="carousel-item relative   mx-auto    w-full rounded-lg"
+          style="
+            background: linear-gradient(
+                rgba(32, 32, 32, 0.856),
+                rgba(53, 52, 52, 0.158)
+              ),
+              url('images/banner3.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+          "
+        >
+          <div class="mx-auto my-24">
+            <div class="text-center text-white">
+              <h1
+                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold max-w-screen-md mx-auto xl:pt-20 text-center"
+              >
+                Exotic tastes at your doorstep
+              </h1>
+              <p class="text-center py-2.5 sm:py-3.5 lg:py-6 font-medium text-base  sm:text-xl  lg:text-2xl">
+                We supply highly quality organic products
+              </p>
+
+              <button
+                class="bg-button-color xl:font-extrabold text-xs xl:text-xl flex mx-auto rounded-lg xl:rounded-xl sm:py-2  xl:py-2.5 px-7"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide2" class="btn btn-circle">❮</a>
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <!-- slide4 -->
+        <div 
+          id="slide4"
+          class="carousel-item relative   mx-auto    w-full rounded-lg"
+          style="
+            background: linear-gradient(
+                rgba(32, 32, 32, 0.856),
+                rgba(53, 52, 52, 0.158)
+              ),
+              url('images/banner4.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+          "
+        >
+          <div class="mx-auto my-24">
+            <div class="text-center text-white">
+              <h1
+                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold max-w-screen-md mx-auto xl:pt-20 text-center"
+              >
+                Exotic tastes at your doorstep
+              </h1>
+              <p class="text-center py-2.5 sm:py-3.5 lg:py-6 font-medium text-base  sm:text-xl  lg:text-2xl">
+                We supply highly quality organic products
+              </p>
+
+              <button
+                class="bg-button-color xl:font-extrabold text-xs xl:text-xl flex mx-auto rounded-lg xl:rounded-xl sm:py-2  xl:py-2.5 px-7"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide3" class="btn btn-circle">❮</a>
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+      <!-- fruit item -->
+      <div class="hidden lg:block mx-auto">
+        <div
+          class="flex justify-evenly bg-white rounded-lg shadow-xl w-9/12 mx-auto relative -top-20"
+        >
+          <div class="i">
+            <img src="images/fruit1.png" alt="" class="items-center mx-auto" />
+            <p class="text-xl font-medium text-center">Grapes</p>
+          </div>
+          <div class="i">
+            <img src="images/fruit2.png" alt="" class="items-center mx-auto" />
+            <p class="text-xl font-medium text-center">Orange</p>
+          </div>
+          <div class="i">
+            <img src="images/fruit3.png" alt="" class="items-center mx-auto" />
+            <p class="text-xl font-medium text-center">Mango</p>
+          </div>
+          <div class="i">
+            <img src="images/fruit4.png" alt="" class="items-center mx-auto" />
+            <p class="text-xl font-medium text-center">Strawberry</p>
+          </div>
+          <div class="i">
+            <img src="images/fruit5.png" alt="" class="items-center mx-auto" />
+            <p class="text-xl font-medium text-center">Pomegranate</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="md:container mx-auto">
+       <!-- <section>
+       deal of the day
+        <div class="flex flex-col lg:flex-row pt-5 justify-between">
+          <div class="left">
+            <h1 class="text-5xl font-extrabold pb-6 text-center lg:text-start">
+              Deal of the day
+            </h1>
+            <p
+              class="font-medium leading-6 max-w-xl text-center lg:text-start py-5 lg:py-0"
+            >
+              Contrary to popular belief, is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old.
+            </p>
+          </div>
+          <div class="right">
+            <div class="flex space-x-6 text-center p-6 rounded-lg mx-auto">
+              <div>
+                <div id="days" class="text-6xl font-bold">00</div>
+                <div class="text-lg uppercase">days</div>
+              </div>
+              <div>
+                <div id="hours" class="text-6xl font-bold">00</div>
+                <div class="text-lg uppercase">hours</div>
+              </div>
+              <div>
+                <div id="minutes" class="text-6xl font-bold">00</div>
+                <div class="text-lg uppercase">min</div>
+              </div>
+              <div>
+                <div id="seconds" class="text-6xl font-bold">00</div>
+                <div class="text-lg uppercase">sec</div>
+              </div>
+            </div>
+
+            <script>
+              function startCountdown(targetDate) {
+                function updateTimer() {
+                  const now = new Date().getTime();
+                  const distance = targetDate - now;
+
+                  if (distance < 0) {
+                    document.getElementById("days").textContent = "00";
+                    document.getElementById("hours").textContent = "00";
+                    document.getElementById("minutes").textContent = "00";
+                    document.getElementById("seconds").textContent = "00";
+                    return;
+                  }
+
+                  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                  const hours = Math.floor(
+                    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+                  );
+                  const minutes = Math.floor(
+                    (distance % (1000 * 60 * 60)) / (1000 * 60)
+                  );
+                  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                  document.getElementById("days").textContent = String(
+                    days
+                  ).padStart(2, "0");
+                  document.getElementById("hours").textContent = String(
+                    hours
+                  ).padStart(2, "0");
+                  document.getElementById("minutes").textContent = String(
+                    minutes
+                  ).padStart(2, "0");
+                  document.getElementById("seconds").textContent = String(
+                    seconds
+                  ).padStart(2, "0");
+                }
+
+                setInterval(updateTimer, 1000);
+                updateTimer();
+              }
+
+              const targetDate = new Date("2027-01-28T00:00:00").getTime(); // যেকোনো তারিখ সেট করুন
+              startCountdown(targetDate);
+            </script>
+          </div>
+        </div>-->
+      </section>
+    </main>
+    
+  </body>
+  
+</html>

@@ -379,12 +379,11 @@
                     return;
                   }
 
-                  cstance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-                  );
-                  const minutes = Math.floor(
-                    (distance % (1000 * 60 * 60)) / (1000 * 60)
-                  );
-                  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
 
                   document.getElementById("days").textContent = String(
                     days
@@ -601,19 +600,20 @@
           meal a treat.
         </p>
         <!-- main container -->
-        <div class="flex flex-col lg:flex-row  mx-auto">
+        <div class="flex flex-col xl:flex-row  mx-auto">
           <!--left container -->
-          <div class=" order-2 lg:order-1 flex flex-col ">
+          <div class=" order-2 xl:order-1 flex flex-col ">
             <!-- left left -->
-            <div class="flex">
-              <div class="left">
+            <div class="flex flex-col mx-auto xl:flex-row">
+              <div class="left mx-auto pb-3 sm:pb-5
+              ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="size-12 p-3 rounded-full bg-icon-color"
+                  class=" size-12 sm:size-16 xl:size-12 p-3 rounded-full bg-icon-color"
                 >
                   <path
                     stroke-linecap="round"
@@ -622,28 +622,28 @@
                   />
                 </svg>
               </div>
-              <div class="right pl-4">
+              <div class="right pl-0 xl:pl-4  ">
                 <h1
-                  class="text-xl inline-block lg:text-2xl font-extrabold border-b-2"
+                  class="text-2xl sm:text-4xl md:text-5xl text-center font-extrabold xl:inline-block xl:text-2xl  xl:border-b-2"
                 >
                   Dedicated Team
                 </h1>
-                <p class="text-description-color pt-4 w-44 sm:w-80">
+                <p class="text-description-color text-center xl:text-start text-xl sm:text-2xl md:text-3xl xl:text-base w-full pt-4  xl:w-80">
                   Our dedicated team works passionately to bring you the
                   freshest and highest-quality fruits.
                 </p>
               </div>
             </div>
             <!-- left center -->
-            <div class="flex my-4">
-              <div class="left">
+            <div class="flex flex-col mx-auto xl:flex-row xl:my-4 my-10 ">
+              <div class="left ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="size-12 p-3 rounded-full bg-icon-color"
+                  class="size-12 sm:size-16 xl:size-12 p-3 rounded-full bg-icon-color"
                 >
                   <path
                     stroke-linecap="round"
@@ -694,11 +694,11 @@
             </div>
           </div>
           <!-- center-container -->
-          <div class="order-1 lg:order-2">
-            <img class="w-96" src="images/whychoose1.png" alt="" />
+          <div class="order-1 xl:order-2 pb-10 xl:pb-0 mx-auto">
+            <img class=" sm:w-screen xl:w-96" src="images/whychoose1.png" alt="" />
           </div>
           <!-- right-container -->
-          <div class=" order-3 lg:order-3 flex  flex-col text-right">
+          <div class=" order-3 xl:order-3 flex  flex-col text-right">
             <!-- right top -->
             <div class="flex ">
               
